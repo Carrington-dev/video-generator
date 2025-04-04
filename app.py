@@ -1,7 +1,8 @@
 # Install moviepy if you haven't already:
 # pip install moviepy
+from moviepy import VideoFileClip, TextClip, concatenate_videoclips
 
-from moviepy.editor import TextClip, concatenate_videoclips
+# from moviepy.editor import TextClip, concatenate_videoclips
 
 # Define video size and common properties
 video_size = (1280, 720)
@@ -10,7 +11,7 @@ bg_color = "black"
 text_color = "white"
 
 # Create individual text clips for each scene
-clip1 = TextClip("Escape the ordinary...", fontsize=50, color=text_color, bg_color=bg_color, size=video_size) \
+clip1 = TextClip("Escape the ordinary...",  color=text_color, bg_color=bg_color, size=video_size) \
     .set_duration(5)
 
 clip2 = TextClip("From iconic landmarks to hidden gems,\nwe bring your dream destinations to life.", 
